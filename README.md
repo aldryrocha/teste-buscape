@@ -27,7 +27,7 @@ By default, the server will only respond to requests from localhost.
 
 Since we have the data.json to be load as a server, you need to run the json-server for it
 ```bash
-$ json-server --watch db.json
+$ json-server --watch data.json
 ```
 
 ## Building and deploying
