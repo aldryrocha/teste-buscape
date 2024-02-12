@@ -1,7 +1,7 @@
 # @aldryrocha' Teste Buscapé
 
 This is a old challenge to a job opportunity as a front-end developer at Buscapé company, made with [HTML5, SASS and Vanilla JS, bundled with Webpack]. 
-The test was posted on github [https://github.com/buscape-company/exercicios/tree/master/frontend]([https://github.com/felipefialho/frontend-challenges](https://github.com/buscape-company/exercicios/tree/master/frontend)) 
+The test was posted on github [https://github.com/buscape-company/exercicios/tree/master/frontend](https://github.com/felipefialho/frontend-challenges](https://github.com/buscape-company/exercicios/tree/master/frontend) 
 
 ## Installing
 
@@ -38,5 +38,4 @@ To build a production-ready version of the project, run:
 $ npm run build-dev
 or
 $ npm run build-prod
-```
 ```
