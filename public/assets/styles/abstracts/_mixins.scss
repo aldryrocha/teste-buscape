@@ -1,0 +1,47 @@
+@use './variables' as var;
+
+//centralize the content
+@mixin margem-central($width){
+    margin:0 auto;
+    width:$width;
+}
+//font style definition
+@mixin ff-fs-cl-fw-line($f-family, $f-size, $f-color, $line, $f-weight:400){
+    font-family: $f-family;
+    font-size: $f-size;
+    color: $f-color;
+    line-height: $line;
+    font-weight: $f-weight;
+}
+
+//MEDIA QUERIES FOR BREAKPOINT DEVICES
+// Small devices
+@mixin sm {
+    @media (min-width: var.$screen-sm) {
+        @content;
+    }
+ }
+ // Medium devices
+ @mixin md {
+    @media (min-width: var.$screen-md) {
+        @content;
+    }
+ }
+ // Large devices
+ @mixin lg {
+    @media (min-width: var.$screen-lg) {
+        @content;
+    }
+ }
+ // Extra large devices
+ @mixin xl {
+    @media (min-width: var.$screen-xl) {
+        @content;
+    }
+ }
+  // Extra large devices
+  @mixin xxl {
+    @media (min-width: var.$screen-xxl) {
+        @content;
+    }
+ }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <title>Buscapé</title>
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Buscapé - Front-end developer challenge" />
+	<meta property="og:description" content="This is a challenge to a job opportunity as a front-end developer at the Buscapé company." />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:image" content="" />
+
+    <link rel="icon" type="image/png" sizes="16x16"  href="/assets/images/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32"  href="/assets/images/favicons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicons/apple-touch-icon-76x76.png">
+    <link rel="icon" type="image/png" sizes="96x96"  href="/assets/images/favicons/apple-touch-icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/images/favicons/android-icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="/" aria-label="Ir a Home" title="Buscapé" rel="noreferrer"><img class="header__logo" src="/assets/images/buscape-logo.svg" alt="Buscapé logo"></a>
+            <div class="header__menu">
+                <span class="qtProductsCart"></span>
+                <input type="checkbox" id="menu" class="header__botao">
+                <label for="menu" class="label-menu"><span class="header__hamburguer"></span></label>
+
+                <div class="header__cart">
+                    <ul class="header__list-produts list-produts"></ul>
+                    <div class="total-payment">
+                        <h4 class="total-payment__title">subtotal</h4>
+                        <p class="total-payment__installments">10X <span></span></p>
+                        <p class="total-payment__totalValue">ou <span></span> à vista</p>
+                    </div>
+                </div>
+            </div>  
+
+        </div>              
+    </header>
+
+    <main>
+        <section class="products"></section>
+        
+    </main>
+
+    <footer><small>Teste para Front-end Buscapé</small></footer>
+    <script src="/bundle.js"></script>
+</body>
+</html>

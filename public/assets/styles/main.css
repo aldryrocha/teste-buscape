@@ -1,0 +1,423 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.6rem;
+  color: #444444;
+  line-height: 3.5rem;
+  font-weight: 500;
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #757575;
+  line-height: 1.9rem;
+  font-weight: 400;
+}
+@media (min-width: 992px) {
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+/*
+    Site header
+*/
+header {
+  background: #ffcd00;
+  position: relative;
+  justify-content: center;
+}
+@media (min-width: 992px) {
+  header {
+    display: flex;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+}
+@media (min-width: 992px) {
+  .header {
+    width: 80%;
+  }
+}
+.header__logo {
+  width: 90px;
+  height: 59px;
+}
+.header__menu {
+  display: flex;
+}
+.header .qtProductsCart {
+  background-color: red;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin-right: -14px;
+  margin-top: 15px;
+  z-index: 1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.5rem;
+  font-weight: 600;
+  line-height: 30px;
+}
+.header .label-menu {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.header__botao {
+  display: none;
+}
+.header__botao:checked ~ .header__cart {
+  display: block;
+}
+.header__botao:checked ~ .label-menu {
+  background: #fff;
+}
+.header__hamburguer {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/Menu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+}
+.header__cart {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0px;
+  background: #ffcd00;
+  z-index: 1;
+  box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.32);
+}
+.header .list-produts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0;
+}
+.header .list-produts__item {
+  background: #c49d00;
+  width: 100%;
+  display: inline-flex;
+  position: relative;
+  gap: 1rem;
+  padding: 1rem;
+}
+.header .list-produts__item .item__remove {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.header .list-produts__item .item__name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  color: #fff;
+  line-height: 1.5rem;
+  font-weight: 500;
+  height: 3rem;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 0.5rem;
+}
+.header .list-produts__item .item__installments, .header .list-produts__item .item__price {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #000;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+.header .list-produts__infos {
+  max-width: 60vw;
+}
+.header .list-produts__img img {
+  border: 1.5px solid #000;
+}
+.header .total-payment {
+  text-align: right;
+  padding: 1rem;
+}
+.header .total-payment__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  color: #000;
+  line-height: 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+.header .total-payment__installments {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #000;
+  line-height: 1.7rem;
+  font-weight: 600;
+}
+.header .total-payment__totalValue {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #000;
+  line-height: 1.7rem;
+  font-weight: 600;
+}
+
+/*
+    Site Products section
+*/
+main {
+  background: #f3f3f3;
+  display: flex;
+  justify-content: center;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+@media (min-width: 992px) {
+  .products {
+    max-width: 80%;
+  }
+}
+.products__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  background: #fff;
+}
+@media (min-width: 992px) {
+  .products__item {
+    flex-direction: row;
+  }
+}
+.products .gallery {
+  width: 90vw;
+}
+@media (min-width: 992px) {
+  .products .gallery {
+    width: 40vw;
+  }
+}
+.products .productInfo__nameItem {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  color: #444444;
+  line-height: 2.3rem;
+  font-weight: 500;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0.85rem 0;
+  margin: 0.85rem 0;
+}
+.products .productInfo__tag {
+  display: inline-flex;
+  background: #1990df;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 0rem 1.2rem 0rem 0.8rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  color: #fff;
+  line-height: 2rem;
+  font-weight: 300;
+  -webkit-clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0 53%, 0% 0%);
+          clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0 53%, 0% 0%);
+}
+.products .productInfo__installments {
+  display: flex;
+  padding-top: 1rem;
+}
+.products .productInfo__valueAmount {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  color: #22b14c;
+  line-height: 2.3rem;
+  font-weight: 600;
+}
+.products .productInfo__valueAmount .value {
+  font-size: 2.5rem;
+}
+.products .productInfo__buttonAddCart {
+  position: relative;
+  background: #22b14c;
+  margin-left: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 0;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  line-height: 2rem;
+  font-weight: 500;
+}
+.products .productInfo__buttonAddCart:before {
+  position: absolute;
+  content: "";
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  transform: rotate(45deg);
+  width: 0.45em;
+  height: 0.45em;
+  right: 12px;
+  top: 41%;
+}
+.products .productInfo__inCash {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #757575;
+  line-height: 2rem;
+  font-weight: 500;
+}
+.products .productInfo__inCash .contrast {
+  color: #22b14c;
+}
+
+.product-img-slide {
+  display: inline-block;
+  width: 100%;
+}
+.product-img-slide .slider-for {
+  width: 82%;
+  float: right;
+  padding: 40px;
+  background: #fff;
+  /* border: 1px solid #ddd; */
+  overflow: hidden;
+  border-radius: 10px;
+}
+.product-img-slide .slider-nav {
+  width: 16%;
+}
+.product-img-slide .slider-nav .slick-list {
+  height: auto !important;
+}
+.product-img-slide .slider-nav .thumb-slide {
+  padding: 4px;
+  margin-bottom: 12px;
+  background: #fff;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.product-img-slide .slider-nav .thumb-slide:last-child {
+  margin-bottom: 0;
+}
+.product-img-slide .slider-nav .thumb-slide.slick-current {
+  border-color: #ddd;
+}
+.product-img-slide .slider-nav .thumb-slide img {
+  max-width: 90px;
+}
+.product-img-slide .slider-nav .slick-arrow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+}
+.product-img-slide .slider-nav .slick-arrow.slick-next {
+  top: auto;
+  bottom: 0;
+  transform: translateX(-50%) rotate(-90deg);
+}
+.product-img-slide .slick-slide img {
+  margin: 0 auto;
+  max-width: 250px;
+}
+
+/*
+    Site footer
+*/
+footer {
+  text-align: center;
+  padding: 2rem 0;
+}/*# sourceMappingURL=main.css.map */

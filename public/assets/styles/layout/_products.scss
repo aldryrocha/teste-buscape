@@ -1,0 +1,124 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins';
+
+/*
+    Site Products section
+*/
+main{
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+}
+.products{    
+    display: flex;
+    flex-wrap: wrap;    
+    padding: 1rem;
+
+    @include mixins.lg{
+        max-width: 80%;
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        padding: 1rem;
+        margin: 1rem;
+        background: var.$color-default;
+        @include mixins.lg{
+            flex-direction: row;
+        } 
+    }
+    .gallery{
+        width: 90vw;
+        @include mixins.lg{
+            width: 40vw;
+        }        
+    }
+    .productInfo{
+
+        &__nameItem{
+            @include mixins.ff-fs-cl-fw-line(var.$font, 1.6rem, var.$color-dark-gray, 2.3rem, 500);
+            border-bottom: 1px solid var.$color-lighter-gray;
+            padding: 0.85rem 0;
+            margin: 0.85rem 0;
+        }
+        &__tag{
+            display: inline-flex;
+            background: var.$color-blue;
+            text-transform: uppercase;
+            border-radius: var.$border-radius;
+            padding: 0rem 1.2rem 0rem 0.8rem;
+            @include mixins.ff-fs-cl-fw-line(var.$font, 0.9rem, var.$color-default, 2rem, 300);
+
+            clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0 53%, 0% 0%);
+        }
+        &__installments{
+            display: flex;
+            padding-top: 1rem;
+        }
+        &__valueAmount{
+            @include mixins.ff-fs-cl-fw-line(var.$font, 1.8rem, var.$color-green, 2.3rem, 600);
+            .value{
+                font-size: 2.5rem;
+            }
+        }
+        &__buttonAddCart{
+            position: relative;
+            background: var.$color-green;
+            margin-left: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: var.$border-radius;
+            border: 0;
+            padding:0.5rem 2rem 0.5rem 1rem;
+            @include mixins.ff-fs-cl-fw-line(var.$font, 1.2rem, var.$color-default, 2rem, 500);
+
+            &:before{
+                position: absolute;
+                content: '';
+                border-style: solid;
+                border-width: 0.25em 0.25em 0 0;
+                transform: rotate(45deg);                    
+                width: 0.45em;
+                height: 0.45em;
+                right: 12px;
+                top: 41%;                   
+            }
+        }
+        &__inCash{
+            @include mixins.ff-fs-cl-fw-line(var.$font, 1rem, var.$color-light-gray, 2rem, 500);
+            .contrast{
+                color:var.$color-green;
+            }
+        }
+    }
+}
+
+.product-img-slide {
+    display:flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    .swiper-for{
+        margin: 0; 
+    }
+    .swiper-nav{
+        width:60%;
+        margin: 0;     
+
+        img{
+            height: 100%;
+            border: 1px solid var.$color-lighter-gray;
+            border-radius: var.$border-radius;
+            padding: 1rem 0;
+        }
+        .swiper-slide-thumb-active{
+            img{
+                border: 1px solid var.$primary-color;
+            }
+        }
+
+
+    }
+}

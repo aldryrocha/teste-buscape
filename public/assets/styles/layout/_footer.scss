@@ -1,0 +1,11 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables' as var;
+
+/*
+    Site footer
+*/
+
+footer{
+    text-align: center;
+    padding: 2rem 0;
+}

@@ -1,0 +1,66 @@
+{
+    "items": [
+        {
+            "product": {
+                "id": 2321312,
+                "name": "Smartphone Apple iPhone 7 128GB",
+                "images": [
+                    "http://intranetpzl.com.br/imgs/smartphone-apple-iphone-7-128gb_1.webp",
+                    "http://intranetpzl.com.br/imgs/smartphone-apple-iphone-7-128gb_2.webp",
+                    "http://intranetpzl.com.br/imgs/smartphone-apple-iphone-7-128gb_3.webp"
+                ],
+                "price": {
+                    "value": 3509.10,
+                    "installments": 10,
+                    "installmentValue": 389.90
+                }
+            }
+        },
+        {
+            "product": {
+                "id": 6717132,
+                "name": "Lenovo IdeaPad 310 80UH0004BR Intel Core i7-6500U 2.5 GHz 8192 MB 1024 GB",
+                "images": [
+                    "http://intranetpzl.com.br/imgs/lenovo-ideapad-310-80uh0004br-intel-core-i7-6500u-2-5-ghz-8192-mb-1024-gb_1.webp"
+                ],
+                "price": {
+                    "value": 2599.00,
+                    "installments": 10,
+                    "installmentValue": 259.90
+                }
+            }
+        },
+        {
+            "product": {
+                "id": 9971,
+                "name": "Smart TV Samsung Série 4 UN32J4300AG 32 polegadas LED Plana",
+                "images": [
+                    "http://intranetpzl.com.br/imgs/smart-tv-samsung-serie-4-un32j4300ag-32-polegadas-led-plana_1.webp",
+                    "http://intranetpzl.com.br/imgs/smart-tv-samsung-serie-4-un32j4300ag-32-polegadas-led-plana_2.webp",
+                    "http://intranetpzl.com.br/imgs/smart-tv-samsung-serie-4-un32j4300ag-32-polegadas-led-plana_3.webp"
+                ],
+                "price": {
+                    "value": 1139.90,
+                    "installments": 10,
+                    "installmentValue": 134.11
+                }
+            }
+        },
+        {
+            "product": {
+                "id": 6717131,
+                "name": "Câmera Digital Canon EOS Rebel T5i 18.0 Megapixels",
+                "images": [
+                    "http://intranetpzl.com.br/imgs/canon-eos-rebel-t5i-18-0-megapixels_1.jpg",
+                    "http://intranetpzl.com.br/imgs/canon-eos-rebel-t5i-18-0-megapixels_2.jpg",
+                    "http://intranetpzl.com.br/imgs/canon-eos-rebel-t5i-18-0-megapixels_3.jpg"
+                ],
+                "price": {
+                    "value": 1999.20,
+                    "installments": 10,
+                    "installmentValue": 235.20
+                }
+            }
+        }        
+    ]
+}

@@ -1,0 +1,148 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins';
+
+/*
+    Site header
+*/
+header{
+    background: var.$primary-color;
+    position: relative;    
+    justify-content: center;
+    @include mixins.lg{
+        display: flex;
+    }
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    gap: 1rem;
+    padding: 0.5rem 1rem; 
+    
+    @include mixins.lg{
+        width: 80%;
+    }
+
+    &__logo{
+        width: 90px;
+        height: 59px;
+    }
+    &__menu{
+        display: flex;
+    }
+    .qtProductsCart{
+        display: none;
+        background-color: red;
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;        
+        text-align: center;
+        margin-right: -14px;
+        margin-top: 15px;
+        z-index: 1;
+        @include mixins.ff-fs-cl-fw-line(var.$font, 1rem, var.$color-default, 1.5rem, 600);
+        line-height: 30px;
+    }
+    .show{
+        display: block;
+    }
+    .label-menu{
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    &__botao{
+        display: none;
+        
+        &:checked ~ .header__cart{
+            display: block;
+        }
+        &:checked ~ .label-menu{
+            background: var.$color-default;
+        }
+    }
+    &__hamburguer{
+        width: 24px;
+        height: 24px;
+        background-image: url(../images/Menu.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+    }
+    &__cart{
+        display: none;
+        position: absolute;
+        top: 100%;
+        width:100%;
+        left: 0px;
+        background: var.$primary-color;
+        z-index: 1;
+        -webkit-box-shadow: 0px 1px 20px 0px rgba(0,0,0,0.32);
+        -moz-box-shadow: 0px 1px 20px 0px rgba(0,0,0,0.32);
+        box-shadow: 0px 1px 20px 0px rgba(0,0,0,0.32);
+        z-index: 2;
+    }
+
+    .list-produts{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 0;
+
+        &__item{
+            background: var.$secondary-color;
+            width: 100%;
+            display: inline-flex;
+            position: relative;
+            gap: 1rem;
+            padding: 1rem;
+            
+            .item__remove{
+                position: absolute;
+                top: 1rem;
+                right: 1.5rem;
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+            .item__name{
+                @include mixins.ff-fs-cl-fw-line(var.$font, 1.3rem, var.$color-default, 1.5rem, 500);
+                height: calc((var.$max-lines) * 1rem * 1.5);
+                position: relative;
+                overflow: hidden;   
+                display: -webkit-box; 
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: var.$max-lines;
+                margin-bottom: 0.5rem;
+            }
+            .item__installments{
+                @include mixins.ff-fs-cl-fw-line(var.$font, 1.2rem, var.$color-black, 1.5rem, 600);
+            }
+            .item__price{
+                @extend .item__installments;
+            }
+        }
+        &__infos{
+            max-width: 60vw;
+        }
+        &__img{
+            img{
+                border: 1.5px solid var.$color-black;
+            }
+        }
+    }
+    .total-payment{
+        text-align: right;
+        padding: 1rem;
+
+        &__title{
+            @include mixins.ff-fs-cl-fw-line(var.$font, 1.1rem, var.$color-black, 1.5rem, 600);
+            border-bottom: 1px solid var.$color-black;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        &__installments{
+            @include mixins.ff-fs-cl-fw-line(var.$font, 1rem, var.$color-black, 1.7rem, 600);
+        }
+        &__totalValue{
+            @include mixins.ff-fs-cl-fw-line(var.$font, 1rem, var.$color-black, 1.7rem, 600);
+        }
+    }
+}
