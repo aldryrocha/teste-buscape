@@ -1,6 +1,6 @@
 # @aldryrocha' Teste Buscapé
 
-This is a old challenge to a job opportunity as a front-end developer at Buscapé company, made with [HTML5, SASS and Vanilla JS, bundled with Webpack plus Babel]. 
+This is a old challenge to a job opportunity as a front-end developer at Buscapé company, made with [HTML5, SASS and Javascript ES6, bundled with Webpack plus Babel]. 
 The test was posted on github [frontend-challenges](https://github.com/buscape-company/exercicios/tree/master/frontend)
 
 ## Installing
